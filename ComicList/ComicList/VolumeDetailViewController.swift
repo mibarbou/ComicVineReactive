@@ -98,7 +98,7 @@ class VolumeDetailViewController: UIViewController {
             .bindTo(issuesView.collectionView.rx.items) { collectionView, item, issue in
 
                 let cell: ItemCell = collectionView.dequeueReusableCell(for: item)
-                cell.titleLabel.text = issue.title
+                cell.titleLabel.text = issue.title ?? ""
                 cell.coverView.url = issue.coverURL
 
                 return cell

@@ -23,7 +23,11 @@ extension VolumeDescription: JSONDecodable {
             return nil
         }
         
-        description = stringHtml.html2String
+        guard let desc = stringHtml.html2String else {
+            return nil
+        }
+        
+        description = desc
         
     }
 }

@@ -45,6 +45,8 @@ extension Resource {
         
         request.httpMethod = method.rawValue
         
+        print(request)
+        
         return request
     }
 }
